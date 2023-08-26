@@ -1,0 +1,129 @@
+﻿@*@model StudentInfoManagementSystem.Models.Student
+
+    @{
+        ViewBag.Title = "Details";
+    }
+
+    <h2>Student Details</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StudentName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FatherName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MotherName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HomeAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HomeAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RegistrationDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RegistrationDate)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
+
+
+@model StudentInfoManagementSystem.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Student Details</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.StudentName)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.StudentName)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.FatherName)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.FatherName)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.MotherName)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.MotherName)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Age)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Age)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.HomeAddress)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.HomeAddress)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.RegistrationDate)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.RegistrationDate)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a href="@Url.Action("Edit", new { id = Model.StudentId })" class="btn btn-primary">Edit</a>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
